@@ -1,0 +1,53 @@
+loginpage:
+  url: 'https://www.google.com'
+  cases:
+      title: '正确登录'
+      steps:
+        - name: '点击输入框'
+          locate:
+            method: get_by_role
+            role: 'combobox'
+            name: 'Search'
+          action:
+            method: click
+        - name: '输入内容'
+          locate:
+            method: get_by_role
+            role: 'combobox'
+            name: 'Search'
+          action:
+            method: fill
+            text: '测试playwright'
+        - name: '回车'
+          locate:
+            method: get_by_role
+            role: 'combobox'
+            name: 'Search'
+          action:
+            method: press
+            value: 'Enter'
+registerpage:
+  url: 'https://www.google.com'
+  cases:
+      title: '正确登录'
+      steps:
+        - name: '点击输入框'
+          locate:
+            method: get_by_role
+            role: combobox
+            name: 'Search'
+          action: click
+        - name: '输入内容'
+          locate:
+            method: get_by_role
+            role: combobox
+            name: 'Search'
+          action: fill
+          value: '测试playwright'
+        - name: '回车'
+          locate:
+            method: get_by_role
+            role: combobox
+            name: 'Search'
+          action: press
+          value: 'Enter'
